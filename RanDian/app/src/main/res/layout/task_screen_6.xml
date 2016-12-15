@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/task_screen_bg_6"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/task_show_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:text="已完成任务：81"
+        android:textColor="@color/white"
+        android:textSize="11sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="8dp"
+        android:text="累计完成80个任务以上用户\n年末可参与抽取年度神秘大奖\n任务完成越多中奖率越高噢。"
+        android:textColor="@color/white"
+        android:textSize="9sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-15dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="8dp"
+        android:text="任务奖励：\n价值5000元神秘大奖\n随机抽取10名"
+        android:textColor="@color/white"
+        android:textSize="11sp" />
+
+    <ImageView
+        android:id="@+id/task_rank_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="50dp"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/task_back" />
+</LinearLayout>

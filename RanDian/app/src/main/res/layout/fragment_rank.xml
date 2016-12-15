@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_rank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/titleBack"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/ll_rank_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/rank_dimen"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <TextView
+                android:id="@+id/rank_day"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/rank_date_bg"
+                android:gravity="center"
+                android:text="日"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/rank_month"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="月"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rank_choose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="个人排行榜"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/rank_choose_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/rank_choose"
+            android:layout_toRightOf="@id/rank_choose"
+            android:contentDescription="@string/app_name"
+            android:padding="2dp"
+            android:src="@mipmap/rank_choose" />
+
+        <ImageView
+            android:id="@+id/rank_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/left_home_tv"
+            android:contentDescription="@string/app_name"
+            android:padding="2dp"
+            android:src="@mipmap/rank_share" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/list_hs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_rank"
+        android:layout_toLeftOf="@+id/list_choose"
+        android:background="@color/titleBack"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="3dp"
+            android:padding="3dp">
+
+            <GridView
+                android:id="@+id/rank_grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@color/transparent"
+                android:gravity="center"
+                android:listSelector="@color/transparent"
+                android:numColumns="auto_fit"
+                android:scrollbars="none"
+                android:stretchMode="spacingWidthUniform" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/list_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/list_hs"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/rl_rank"
+        android:background="@color/titleBack"
+        android:contentDescription="@string/app_name"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/list_add" />
+
+    <ViewFlipper
+        android:id="@+id/rank_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rank_myself"
+        android:layout_below="@id/list_hs" />
+
+    <TextView
+        android:id="@+id/rankEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/list_hs"
+        android:gravity="center"
+        android:text="网络异常，请稍后重试!"
+        android:textColor="@color/black_light"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/rank_myself"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#3033FFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/my_rank_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:text="11."
+                android:textColor="@color/text_color"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/myself_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/randian" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:text="我"
+                android:textColor="@color/text_color"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/ranking_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-3dp"
+                android:contentDescription="@string/app_name"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/rank_rise" />
+
+            <TextView
+                android:id="@+id/my_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="-5dp"
+                android:text="30"
+                android:textColor="@color/colorAccent"
+                android:textSize="11sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/myself_data"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="xxx小时xxx分钟"
+                android:textColor="@color/gray_dark"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

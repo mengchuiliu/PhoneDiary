@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+
+android {
+//    signingConfigs {
+//        randian {
+//            keyAlias 'randian'
+//            keyPassword 'randian'
+//            storeFile file('F:/AS密钥/RanDian.jks')
+//            storePassword 'randian'
+//        }
+//    }
+    compileSdkVersion 23
+    buildToolsVersion "24.0.1"
+    defaultConfig {
+        applicationId "com.rdcx.randian"
+        minSdkVersion 8
+        targetSdkVersion 23
+        versionCode 12
+        versionName "ShouJiRiJi RD-V2.1"
+    }
+    buildTypes {
+        release {
+//            signingConfig signingConfigs.randian
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+//            signingConfig signingConfigs.randian
+        }
+    }
+    packagingOptions {
+        exclude 'AndroidManifest.xml'
+    }
+
+    //多渠道打包
+    productFlavors {
+        YingYongBao {
+            manifestPlaceholders = [CHANNEL_NAME: "YingYongBao"]
+        }
+        shuaji {
+            manifestPlaceholders = [CHANNEL_NAME: "shuaji"]
+        }
+        WanDouJia {
+            manifestPlaceholders = [CHANNEL_NAME: "WanDouJia"]
+        }
+//        GooglePlay {
+//            manifestPlaceholders = [CHANNEL_NAME: "GooglePlay"]
+//        }
+        XiaoMi {
+            manifestPlaceholders = [CHANNEL_NAME: "XiaoMi"]
+        }
+    }
+
+    task copyNativeLibs(type: Copy) {
+        // third party lib so
+        from(new File(projectDir, 'libs')) { include 'armeabi/*.so' }
+        into new File(buildDir, 'native-libs')
+    }
+
+    tasks.withType(JavaCompile) {
+        compileTask ->
+            //noinspection all
+            compileTask.dependsOn copyNativeLibs
+    }
+
+//noinspection all
+//    tasks.withType(com.android.build.gradle.tasks.PackageApplication) {
+//        pkgTask ->
+//            pkgTask.jniFolders = new HashSet<>()
+//            pkgTask.jniFolders.add(new File(buildDir, 'native-libs'))
+//    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.github.chenupt.android:multiplemodel:1.1.0@aar'
+    compile 'com.google.guava:guava:18.0'
+    compile files('build/intermediates/exploded-aar/com.github.chenupt.android/multiplemodel/1.1.0/jars/classes.jar')
+    compile files('libs/Volley.jar')
+    compile files('libs/umeng-analytics-v5.6.1.jar')
+    //compile 'com.umeng.analytics:analytics:latest.integration'
+    compile files('libs/umeng-update-v2.6.0.1.jar')
+    compile files('libs/ui.jar')
+    compile files('libs/pdr.jar')
+    compile files('libs/Android_2DMapApi_V2.5.0.jar')
+    compile files('libs/AMap_Services_V2.5.0.jar')
+    compile files('libs/mta-sdk-1.6.2.jar')
+    compile files('libs/open_sdk_r5043.jar')
+    compile files('libs/weibosdkcore_v3.1.1.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/Android_Location_V1.3.3.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/com.umeng.message.lib_v2.6.0.jar')
+    compile files('libs/GetuiExt-2.0.3.jar')
+    compile files('libs/GetuiSDK2.7.0.0.jar')
+    compile files('libs/fastjson-1.1.40.jar')
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.rdcx.randian.DiaryEditorActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/titleBack">
+
+        <TextView
+            android:id="@+id/ed_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/left_home_tv"
+            android:drawableLeft="@mipmap/diary_back"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=" 返回"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="25dp"
+        android:padding="8dp"
+        android:text="请选择你想记录的数据:"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:horizontalSpacing="18dp"
+        android:listSelector="@color/transparent"
+        android:numColumns="3"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="30dp"
+        android:verticalSpacing="25dp" />
+
+    <Button
+        android:id="@+id/ed_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="35dp"
+        android:background="@drawable/login_btn"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>

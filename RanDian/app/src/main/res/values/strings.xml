@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">手机日记</string>
+    <string name="regist_text">注册即代表同意【手机日记】<a href="http://120.24.253.146:8081/protocol.html">服务条款和隐私条款</a></string>
+    <string name="buluo_text"> 换肤</string>
+    <string name="home_no_permission">没有数据？点击设置一下权限吧>></string>
+    <string name="home_set_protect">试试开机自启吧>></string>
+    <string name="permission_external_storage">设置或显示用户头像时，需要使用“读写外部存储”的权限，请在设置中开启，然后再继续以前的操作。</string>
+    <string name="no_permission_external_storage">没有“读写外部存储”的权限，请在设置中开启，然后再继续以前的操作。</string>
+
+    <drawable name="text_normal">#00000000</drawable>
+    <drawable name="text_pressed">#55333333</drawable>
+    <drawable name="left_pressed">#55000000</drawable>
+    <drawable name="set_tv_pressed">#FFFFFFFF</drawable>
+    <drawable name="portrait_pressed">#A066D7B9</drawable>
+
+    <string name="sunday">Su</string>
+    <string name="monday">Mo</string>
+    <string name="thesday">To</string>
+    <string name="wednesday">We</string>
+    <string name="thursday">Th</string>
+    <string name="friday">Fr</string>
+    <string name="saturday">Sa</string>
+
+</resources>

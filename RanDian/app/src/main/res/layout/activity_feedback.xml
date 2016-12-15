@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.rdcx.randian.FeedbackActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/titleBack">
+
+        <ImageView
+            android:id="@+id/feed_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/left_home_tv"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:src="@mipmap/back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:text="意见反馈"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edit_advice"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_weight="2"
+        android:background="@mipmap/feed_content"
+        android:gravity="left"
+        android:hint="感谢您使用手机日记，请留下您宝贵的建议吧(输入请不超过两百字)"
+        android:maxLength="200"
+        android:padding="8dp"
+        android:textColor="#FF000000"
+        android:textColorHint="#A0000000"
+        android:textCursorDrawable="@drawable/youbiao"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="联系方式:"
+        android:textColor="@color/gray_dark"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edit_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@mipmap/feed_contact"
+        android:hint="请留下您的手机号码或者Email"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textColor="#FF000000"
+        android:textColorHint="#A0000000"
+        android:textCursorDrawable="@drawable/youbiao"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/login_btn_change"
+        android:text="提   交"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+</LinearLayout>

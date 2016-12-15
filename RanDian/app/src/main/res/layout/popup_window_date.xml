@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCFFFFFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/choose_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="3dp"
+        android:text="日 • 记"
+        android:textColor="@color/gray_dark"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#55000000" />
+
+    <TextView
+        android:id="@+id/choose_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="3dp"
+        android:text=" 周 • 记 "
+        android:textColor="@color/gray_dark"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/line_rank"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#55000000" />
+
+    <TextView
+        android:id="@+id/choose_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="3dp"
+        android:text=" 月 • 记 "
+        android:textColor="@color/gray_dark"
+        android:textSize="15sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#55000000"
+        android:visibility="gone" />
+
+    <!--<TextView
+        android:id="@+id/choose_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="3dp"
+        android:text=" 掌 心•年 "
+        android:textColor="@color/white"
+        android:textSize="13sp"/>-->
+
+</LinearLayout>

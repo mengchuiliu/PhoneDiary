@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity">
+
+
+    <ImageView
+        android:id="@+id/wel_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:background="@mipmap/wel_page"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"/>
+
+    <RelativeLayout
+        android:id="@+id/re_wel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <springindicator.viewpager.ScrollerViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+
+        <springindicator.SpringIndicator
+            android:id="@+id/indicator"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            app:siIndicatorColor="@color/colorPrimary"
+            app:siIndicatorColors="@array/indicator_colors"
+            app:siSelectedTextColor="@android:color/white"
+            app:siTextColor="@color/colorPrimaryDark"
+            app:siTextSize="18sp"/>
+
+        <com.rdcx.myview.WaterWave
+            android:id="@+id/btn_wel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="立 即 体 验"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+        </com.rdcx.myview.WaterWave>
+    </RelativeLayout>
+
+</RelativeLayout>

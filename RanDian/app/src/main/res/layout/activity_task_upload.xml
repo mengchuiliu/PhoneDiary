@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/task_cloud"
+                tools:context="com.rdcx.randian.AboutActivity">
+
+    <RelativeLayout
+        android:id="@+id/task_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#44bfb9">
+
+        <ImageView
+            android:id="@+id/set_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/left_home_tv"
+            android:contentDescription="@string/app_name"
+            android:padding="10dp"
+            android:src="@mipmap/back_white"/>
+
+        <TextView
+            android:id="@+id/task_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/task_finish_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/left_home_tv"
+            android:padding="12dp"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/task_title"
+        android:layout_margin="20dp"
+        android:background="@mipmap/task_upload_bg">
+
+        <ImageView
+            android:id="@+id/task_upload_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/task_upload_add"/>
+
+        <TextView
+            android:id="@+id/task_upload_add_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/task_upload_add"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="添加照片"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/task_upload_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/task_upload_add_photo"
+            android:gravity="center"
+            android:paddingEnd="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingStart="20dp"
+            android:text="日期 ："
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/task_upload_date_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/task_upload_add_photo"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/task_upload_date_tv"
+            android:layout_toRightOf="@+id/task_upload_date_tv"
+            android:inputType="date"/>
+
+        <TextView
+            android:id="@+id/task_upload_people_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/task_upload_date_tv"
+            android:gravity="center"
+            android:paddingEnd="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingStart="20dp"
+            android:text="人物 ："
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/task_upload_people_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/task_upload_date_tv"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/task_upload_people_tv"
+            android:layout_toRightOf="@+id/task_upload_people_tv"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/task_upload_event_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/task_upload_people_tv"
+            android:gravity="center"
+            android:paddingEnd="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingStart="20dp"
+            android:text="事件 ："
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/task_upload_event_et"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/task_upload_people_et"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/task_upload_event_tv"
+            android:layout_toRightOf="@+id/task_upload_event_tv"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:minLines="8"
+            android:scrollbars="vertical"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

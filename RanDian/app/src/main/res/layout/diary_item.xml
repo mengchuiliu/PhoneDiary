@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8eef2"
+    android:descendantFocusability="blocksDescendants">
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:text="23"
+        android:textColor="@color/gray_dark"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/day"
+        android:layout_below="@id/day"
+        android:text="2016.12"
+        android:textColor="@color/gray_dark"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/day"
+        android:layout_alignRight="@id/date"
+        android:layout_marginBottom="3dp"
+        android:text="周四"
+        android:textColor="@color/gray_dark"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="300dp"
+        android:layout_alignBottom="@+id/line_ll"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@id/date"
+        android:background="@color/gray_light" />
+
+    <ImageView
+        android:id="@+id/tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_toRightOf="@id/date"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/tag" />
+
+    <LinearLayout
+        android:id="@+id/line_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/tag"
+        android:background="@drawable/diarybg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/diary_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <GridView
+                android:id="@+id/diary_gv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:numColumns="3"
+                android:scrollbars="none" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dimension"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="通话xxx小时,通话xxx小时"
+            android:textColor="#51C4BE"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/diary_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="今天天气不错，天气不错，辛勤劳力中，你有点什么想说的呢！"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/diary_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="10:18"
+            android:textColor="@color/gray_dark" />
+    </LinearLayout>
+</RelativeLayout>
